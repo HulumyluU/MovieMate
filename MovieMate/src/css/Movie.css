@@ -1,0 +1,200 @@
+.movie-details-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+.movie-header {
+   position: relative;
+   margin-bottom: 30px;
+}
+
+.movie-backdrop {
+   position: relative;
+   width: 100%;
+   height: 500px;
+   overflow: hidden;
+}
+
+.movie-backdrop img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: brightness(0.5);
+}
+
+.movie-header-overlay {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 20px;
+   color: white;
+}
+
+.movie-header-overlay h1 {
+   font-size: 2.5rem;
+   margin-bottom: 10px;
+}
+
+.movie-header-info {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.movie-main-content {
+   display: flex;
+   gap: 30px;
+}
+
+.movie-poster-and-actions {
+   flex: 0 0 300px;
+}
+
+.movie-poster img {
+   width: 100%;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.favorite-btn {
+   width: 10%;
+   padding: 10px;
+   margin-top: 15px;
+   background-color: transparent;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.favorite-btn.active {
+   background-color: transparent;
+}
+
+.movie-info {
+   flex: 1;
+}
+
+.movie-info h2 {
+   border-bottom: 2px solid #333;
+   padding-bottom: 10px;
+   margin-bottom: 15px;
+}
+
+.movie-additional-info {
+   margin-top: 20px;
+}
+
+.info-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+}
+
+.vote-count {
+   color: #666;
+   margin-left: 5px;
+   font-size: 0.8rem;
+}
+
+.movie-trailer {
+   margin-top: 30px;
+}
+
+.movie-trailer iframe {
+   width: 100%;
+   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+   .movie-main-content {
+       flex-direction: column;
+   }
+
+   .movie-poster-and-actions {
+       width: 100%;
+       max-width: 400px;
+       margin: 0 auto;
+   }
+
+   .info-grid {
+       grid-template-columns: 1fr;
+   }
+}
+
+/*** styles for actors section ***/
+
+.movie-actors-section {
+   margin-top: 30px;
+}
+
+.movie-actors-section h2 {
+   border-bottom: 2px solid #333;
+   padding-bottom: 10px;
+   margin-bottom: 20px;
+}
+
+.actors-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   gap: 20px;
+}
+
+.actor-card {
+   text-align: center;
+   background-color: #343434;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease;
+}
+
+.actor-card:hover {
+   transform: scale(1.05);
+}
+
+.actor-image {
+   width: 100%;
+   height: 225px;
+   object-fit: cover;
+}
+
+.actor-info {
+   padding: 10px;
+}
+
+.actor-info h3 {
+   margin: 0 0 5px 0;
+   font-size: 1rem;
+}
+
+.actor-info p {
+   margin: 0;
+   color: #a9a4a4;
+   font-size: 0.9rem;
+}
+
+.show-more-actors-btn {
+   display: block;
+   width: 250px;
+   margin: 20px auto;
+   padding: 10px;
+   background-color: #333;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.show-more-actors-btn:hover {
+   background-color: #555;
+}
+
+@media (max-width: 768px) {
+   .actors-grid {
+       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+   }
+}
